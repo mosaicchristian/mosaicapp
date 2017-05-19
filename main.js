@@ -1,12 +1,18 @@
 import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+
+import MosaicApp from './reducers/main.js';
+
+let store = createStore(MosaicApp);
 
 class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up main.js to start working on your app!</Text>
+        <Text>Mosaic App. Hype!</Text>
       </View>
     );
   }
