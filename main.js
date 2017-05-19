@@ -2,11 +2,15 @@ import Expo from 'expo';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Provider} from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import logger from 'redux-logger'
 
 import MosaicApp from './reducers/main.js';
 
-let store = createStore(MosaicApp);
+let store = createStore(
+    MosaicApp,
+    applyMiddleware(logger),
+);
 
 class App extends React.Component {
     render() {
