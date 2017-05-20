@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 
 const initialState = {};
 
-const mainReducer = (state, action) => { 
-    if (state === undefined) { 
+const mainReducer = (state, action) => {
+    if (state === undefined) {
         return initialState;
     }
 };
