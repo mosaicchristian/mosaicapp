@@ -33,5 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-
 Expo.registerRootComponent(App);
