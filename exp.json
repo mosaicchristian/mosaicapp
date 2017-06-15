@@ -1,6 +1,6 @@
 {
   "name": "mosaicapp",
-  "description": "An empty new project",
+  "description": "The mobile application for Mosaic Christian Church",
   "slug": "mosaicapp",
   "privacy": "public",
   "sdkVersion": "16.0.0",
