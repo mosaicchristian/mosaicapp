@@ -1,15 +1,8 @@
 import { combineReducers } from 'redux';
+import navigationReducer from './navigation.js';
 
-const initialState = {};
-
-const mainReducer = (state, action) => {
-    if (state === undefined) {
-        return initialState;
-    }
-};
-
-const MosaicApp = combineReducers({
-    mainReducer,
+const AppReducer = combineReducers({
+    nav: navigationReducer,
 });
 
-export default MosaicApp;
+export default AppReducer;
