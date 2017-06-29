@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         backgroundColor: '#000',
         justifyContent: 'center',
+        alignItems: 'center',
     },
     logoStyle: {
-        marginTop: '20%',
         width: 150,
         height:150,
     },

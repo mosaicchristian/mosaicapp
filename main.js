@@ -3,9 +3,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
-
-import AppReducer from './reducers/main.js';
-import ConnectedRootNavigator from './navigators/root.js';
+import AppReducer from './reducers/AppReducer.js';
+import ConnectedRootNavigator from './navigators/RootNavigator.js';
 
 class App extends React.Component {
 

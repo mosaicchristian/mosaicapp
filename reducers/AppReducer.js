@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import navigationReducer from './navigation.js';
+import NavigationReducer from './NavigationReducer.js';
 
 const AppReducer = combineReducers({
-    nav: navigationReducer,
+    nav: NavigationReducer,
 });
 
 export default AppReducer;

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNavigationHelpers, StackNavigator } from 'react-navigation';
 
-import SplashScreen from '../components/Splash.js';
-import AppNavigator from '../navigators/app.js';
+import SplashScreen from '../components/SplashScreen.js';
+import AppNavigator from '../navigators/AppNavigator.js';
 
 
 export const RootNavigator = StackNavigator({
