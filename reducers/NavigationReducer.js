@@ -1,7 +1,15 @@
+import { NavigationActions } from 'react-navigation';
 import { RootNavigator } from '../navigators/RootNavigator.js';
 
-const splashAction = RootNavigator.router.getActionForPathAndParams('Splash');
-const initialNavState = RootNavigator.router.getStateForAction(splashAction);
+const initialNavState = RootNavigator.router.getStateForAction(
+    NavigationActions.reset({
+        index: 1,
+        actions: [
+            NavigationActions.navigate({ routeName: 'App'}),
+            NavigationActions.navigate({ routeName: 'Splash'}),
+        ],
+    })
+);
 
 function NavigationReducer(state = initialNavState, action) {
     let nextState = RootNavigator.router.getStateForAction(action, state);
