@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
 import { NavigationActions } from 'react-navigation';
+import { connect } from 'react-redux';
 
 const styles = StyleSheet.create({
     container: {
@@ -16,20 +17,27 @@ const styles = StyleSheet.create({
     },
 });
 
-let sleep = (ms) => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-};
+const navigateHome = NavigationActions.reset({
+    index: 0,
+    actions: [NavigationActions.navigate({ routeName: 'App' })],
+});
 
 class SplashScreen extends React.Component {
-    componentDidMount() {
-        const dispatchAction = NavigationActions.reset({
-            index: 0,
-            actions: [NavigationActions.navigate({ routeName: 'App' })],
-        });
 
-        sleep(2000).then(() => {
-            this.props.navigation.dispatch(dispatchAction);
-        });
+    componentWillReceiveProps(nextProps) {
+
+        const currentRoute = nextProps.nav.routes[nextProps.nav.index];
+
+        if (currentRoute.routeName === 'Splash') {
+            //Wait for Web Content to Load.
+            let appLoaded = true;
+            Object.entries(nextProps.screens).forEach((screen) => {
+                if (!screen[1].isLoaded) { appLoaded = false; }
+            });
+            if (appLoaded) {
+                this.props.navigation.dispatch(navigateHome);
+            }
+        }
     }
 
     render() {
@@ -44,4 +52,11 @@ class SplashScreen extends React.Component {
     }
 }
 
-export default SplashScreen;
+const mapStateToProps = state => {
+    return {
+        nav: state.nav,
+        screens : state.screens,
+    };
+};
+
+export default connect(mapStateToProps)(SplashScreen);
