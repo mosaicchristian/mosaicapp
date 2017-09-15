@@ -1,0 +1,32 @@
+{
+  "expo": {
+      "name": "mosaicapp",
+      "description": "The mobile application for Mosaic Christian Church",
+      "slug": "mosaicapp",
+      "privacy": "public",
+      "sdkVersion": "20.0.0",
+      "version": "1.0.0",
+      "orientation": "portrait",
+      "primaryColor": "#cccccc",
+      "icon": "./assets/icons/Icon.png",
+      "packagerOpts": {
+        "assetExts": ["ttf", "mp4"]
+      },
+      "ios": {
+        "supportsTablet": true,
+        "bundleIdentifier": "org.mosiacchristian.app"
+    },
+    "loading": {
+        "icon": "./assets/icons/Splash_Screen.png",
+        "backgroundColor": "#FFFFFF",
+        "splash": {
+            "backgroundColor": "#FFFFFF",
+            "image": {
+                "ios": {
+                    "backgroundImage": "./assets/icons/Splash_Screen.png"
+                }
+            }
+        }
+    }
+  }
+}
