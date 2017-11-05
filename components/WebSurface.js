@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { WebView } from 'react-native';
 import { connect } from 'react-redux';
-import { startLoad, finishLoad } from '../actions/screen.js';
+import {startLoad, finishLoad } from '../actions/web.js';
 
 class WebSurface extends React.Component {
     constructor() {
