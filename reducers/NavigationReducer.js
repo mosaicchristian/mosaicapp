@@ -1,10 +1,10 @@
-import { RootNavigator } from '../navigators/RootNavigator.js';
+import { routeName as homeRoute } from '../components/HomeScreen.js';
+import { AppNavigator } from '../navigators/AppNavigator.js';
 
-const splashAction = RootNavigator.router.getActionForPathAndParams('Splash');
-const initialNavState = RootNavigator.router.getStateForAction(splashAction);
+const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams(homeRoute));
 
-function NavigationReducer(state = initialNavState, action) {
-    let nextState = RootNavigator.router.getStateForAction(action, state);
+function NavigationReducer(state = initialState, action) {
+    let nextState = AppNavigator.router.getStateForAction(action, state);
     return nextState || state;
 }
 
