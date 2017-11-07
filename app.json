@@ -16,9 +16,10 @@
             "supportsTablet": true,
             "bundleIdentifier": "org.mosiacchristian.app"
         },
-        "splash": {
+        "loading": {
             "backgroundColor": "#2D2926",
             "image": "./assets/splash.png",
+            "hideExponentText": true
         }
     }
 }

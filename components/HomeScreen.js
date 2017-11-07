@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View} from 'react-native';
 import { connect } from 'react-redux';
+import { FontAwesome } from '@expo/vector-icons';
 import WebSurface from './WebSurface.js';
 
 const styles = StyleSheet.create({
@@ -17,6 +18,9 @@ const URL = 'http://mosaicchristian.org/mobilehome';
 class HomeScreen extends React.Component {
     static navigationOptions = {
         title: routeName,
+        tabBarIcon: ({tintColor}) => (
+          <FontAwesome name="home" color={tintColor} size={26} />
+        ),
     };
 
     render() {

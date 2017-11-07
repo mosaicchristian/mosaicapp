@@ -5,6 +5,17 @@ export const screens = {
     [homeRoute]: { screen: HomeScreen},
 };
 
-export const AppNavigator = TabNavigator(screens);
+export const tabOptions = {
+    tabBarOptions: {
+        showLabel: false,
+        activeTintColor: '#f15922',
+        inactiveTintColor: '#818285',
+        style: {
+            backgroundColor: '#231f20',
+        },
+    },
+};
+
+export const AppNavigator = TabNavigator(screens, tabOptions);
 
 export default AppNavigator;
