@@ -19,6 +19,7 @@
         "splash": {
             "backgroundColor": "#2D2926",
             "image": "./assets/splash.png",
+            "hideExponentText": true
         }
     }
 }
